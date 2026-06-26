@@ -1,2 +1,12 @@
-/* empty css                      */(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&i(o)}).observe(document,{childList:!0,subtree:!0});function s(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerPolicy&&(r.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?r.credentials="include":e.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function i(e){if(e.ep)return;e.ep=!0;const r=s(e);fetch(e.href,r)}})();
+import"./assets/modulepreload-polyfill-B5Qt9EMX.js";import{S as a}from"./assets/vendor-CgTBfC_f.js";const e=document.querySelector(".gallery"),i=images.map(l=>`
+      <li class="gallery-item">
+        <a class="gallery-link" href="${l.original}">
+          <img
+            class="gallery-image"
+            src="${l.preview}"
+            alt="${l.description}"
+          />
+        </a>
+      </li>
+    `).join("");e.innerHTML=i;new a(".gallery a",{captionsData:"alt",captionDelay:250});
 //# sourceMappingURL=index.js.map
